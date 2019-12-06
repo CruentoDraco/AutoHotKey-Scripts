@@ -8,10 +8,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Menu, Tray, Icon, shell32.dll, 16 ;this changes the icon into a little laptop thingy. just useful for making it distinct from the others.
-SetCapsLockState, AlwaysOff ; Disable Capslock
-RControl & RShift::AltTab  ; Switch Windows with right control and rshift
-RControl & Enter::ShiftAltTab  ; reverses direction
-; HEADER END
+
 
 ;:--:--:--:--:--:--:--:--:--:
 ; CAPSLOCK HOTKEYS
@@ -69,20 +66,10 @@ E:: ;Eclipse
 Return
 H:: ;DreamWeaver
 Return
+
 #If
 
 ;:--:--:--:--:--:--:--:--:--:
 ; END CAPSLOCK HOTKEYS
 ;:--:--:--:--:--:--:--:--:--:
 
-;:--:--:--:--:--:--:--:--:--:
-; NUMPADLK OFF HOTKEYS 
-;:--:--:--:--:--:--:--:--:--:
-
-;something helpful keys 
-
-;maybe start and end other ahk scripts
-
-;:--:--:--:--:--:--:--:--:--:
-; END NUMPADLK OFF HOTKEYS 
-;:--:--:--:--:--:--:--:--:--:
