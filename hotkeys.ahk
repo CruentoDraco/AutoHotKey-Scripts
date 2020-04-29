@@ -31,6 +31,8 @@ D::
     run, C:\Users\%A_UserName%\Dropbox
 Return
 
+
+
 P:: ;Open every Programm needed for Programming maybe move them to the right position on the screens
 Return
 O:: ;Open every Programm needed for Office Working maybe move them to the right position on the screens
@@ -48,7 +50,7 @@ Return
 Return
 ^A:: ;Android Studio
 Return
-M:: ;Macro Deck
+^M:: ;Macro Deck
 Return
 W:: ;WhatsApp
 Return
@@ -68,8 +70,6 @@ H:: ;DreamWeaver
 Return
 
 #If
-
 ;:--:--:--:--:--:--:--:--:--:
 ; END CAPSLOCK HOTKEYS
 ;:--:--:--:--:--:--:--:--:--:
-
