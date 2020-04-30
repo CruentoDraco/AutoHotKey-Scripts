@@ -16,133 +16,145 @@ Menu, Tray, Icon, shell32.dll, 16 ;this changes the icon into a little laptop th
 #If, GetKeyState("Capslock", "P")
 
 F1::
-    run, %A_MyDocuments%\Repos\AutoHotKey Scripts
-    run, D:\AutoHotKeyLinks
+    run, C:\Windows\explorer.exe
 Return
 F2:: 
-    run, %A_MyDocuments%\Repos
+    run, C:\Windows\System32\Taskmgr.exe
 Return
 
 F3::
-    run, C:\Users\%A_UserName%\Dropbox\ProjectReleases
+    run, C:\Program Files\AutoHotkey\WindowSpy.ahk
 Return
 
 F4::
     run, C:\Users\%A_UserName%\Dropbox
 Return
 
-F5:: ;MYPC
-    run, C:\Windows\explorer.exe
+F5:: 
+    run, C:\Users\%A_UserName%\Dropbox\ProjectReleases
 Return 
 
-F6:: ;TaskManager
-    run, C:\Windows\System32\Taskmgr.exe
+F6:: 
+    run, %A_MyDocuments%\Repos
 Return
 
-F7:: ;Window Spy
-    run, C:\Program Files\AutoHotkey\WindowSpy.ahk
+F7::
+    run, %A_MyDocuments%\Repos\AutoHotKey Scripts
+    run, D:\AutoHotKeyLinks
+Return
+
+M:: ;Main Office or Programming
+spotify()
+firefox()
+discord()
+whatsApp()
+keeweb()
+Return
+
+G:: ;Gaming
+spotify()
+discord()
+whatsApp()
+keeweb()
 Return
 
 P:: ;Open every Programm needed for Programming maybe move them to the right position on the screens
 Return
+
 O:: ;Open every Programm needed for Office Working maybe move them to the right position on the screens
 Return
 
-S:: ;Spotify
-    IfWinNotExist, ahk_exe Spotify.exe
-        run, D:\AutoHotKeyLinks\Spotify.exe
-    Else
-        WinActivate, ahk_exe Spotify.exe
-Return
-T:: ;Source Tree
-    IfWinNotExist, ahk_exe SourceTree.exe
-        run, C:\Users\%A_UserName%\AppData\Local\SourceTree\app-3.3.4\SourceTree.exe
-    Else
-        WinActivate, ahk_exe SourceTree.exe
-Return
-F:: ;Firefox
-    IfWinNotExist, ahk_exe firefox.exe
-        run, C:\Program Files\Mozilla Firefox\firefox.exe
-    Else
-        WinActivate, ahk_exe firefox.exe
-Return
-V:: ;Visual Studio
-    IfWinNotExist, ahk_exe devenv.exe
-        run, C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
-    Else
-        WinActivate, ahk_exe devenv.exe
-Return
-!V:: ;Visual Studio Code
-    IfWinNotExist, ahk_exe Code.exe
-        run, C:\Users\Re-De\AppData\Local\Programs\Microsoft VS Code\Code.exe
-    Else
-        WinActivate, ahk_exe Code.exe
-Return
-A:: ;Android Studio
-    IfWinNotExist, ahk_exe studio64.exe
-        run, D:\Android\Android Studio\bin\studio64.exe
-    Else
-        WinActivate, ahk_exe studio64.exe
-Return
+S:: spotify()
+T:: sourceTree() 
+F:: firefox() 
+V:: visualStudio() 
+!V:: visualStudioCode()
+A:: android()
 ;!M:: ;Macro Deck
 ;Return
-W:: ;WhatsApp
-    IfWinNotExist, ahk_exe WhatsApp.exe
-        run, D:\AutoHotKeyLinks\WhatsApp.exe
-    Else
-        WinActivate, ahk_exe WhatsApp.exe
-Return
-!W:: ; Word
-    IfWinNotExist, ahk_exe WINWORD.EXE
-        run, C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE
-    Else
-        WinActivate, ahk_exe WINWORD.EXE
-Return
-!P:: ; PowerPoint
-    IfWinNotExist, ahk_exe POWERPNT.EXE
-        run, C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE
-    Else
-        WinActivate, ahk_exe POWERPNT.EXE
-Return
-K:: ;KeeWeb
-    IfWinNotExist, ahk_exe KeeWeb.exeq
-        run, C:\Program Files\KeeWeb\KeeWeb.exe
-    Else
-        WinActivate, ahk_exe KeeWeb.exe
-Return
-D:: ;Discord
-    IfWinNotExist, ahk_exe Discord.exe
-        run, C:\Users\Re-De\AppData\Local\Discord\app-0.0.306\Discord.exe
-    Else
-        WinActivate, ahk_exe Discord.exe
-Return
-X:: ;Xbox App
-    IfWinNotExist, ahk_exe Xbox.exe
-        run, D:\AutoHotKeyLinks\Xbox.exe
-    Else
-        WinActivate, ahk_exe Xbox.exe
-Return
-E:: ; Email
-    IfWinNotExist, ahk_exe ApplicationFrameHost.exe
-        run, D:\AutoHotKeyLinks\Mail
-    Else
-        WinActivate, ahk_exe ApplicationFrameHost.exe
-Return 
+W:: whatsApp()
+!W:: word() 
+!P:: powerPoint()
+K:: keeweb() 
+D:: discord() 
+X:: xbox() 
+E:: email()
 ;!E:: ;Eclipse
 ;    IfWinNotExist, ahk_exe WhatsApp.exe
 ;        run, D:\AutoHotKeyLinks\WhatsApp.exe
 ;    Else
 ;        WinActivate, ahk_exe WhatsApp.exe
 ;Return
-H:: ;DreamWeaver
-    IfWinNotExist, ahk_exe Dreamweaver.exe
-        run, C:\Program Files\Adobe\Adobe Dreamweaver CC 2019\Dreamweaver.exe
-    Else
-        WinActivate, ahk_exe Dreamweaver.exe
-Return
-
+H:: dreamWeaver()
 #If
 ;:--:--:--:--:--:--:--:--:--:
 ; END CAPSLOCK HOTKEYS
 ;:--:--:--:--:--:--:--:--:--:
+;:--:--:--:--:--:--:--:--:--:
+; METHODS
+;:--:--:--:--:--:--:--:--:--:
+spotify(){
+   runProgram("D:\AutoHotKeyLinks\Spotify.exe", "ahk_exe Spotify.exe") 
+}
 
+sourceTree(){
+   runProgram("C:\Users\Re-De\AppData\Local\SourceTree\app-3.3.4\SourceTree.exe", "ahk_exe SourceTree.exe") 
+}
+
+firefox(){
+   runProgram("C:\Program Files\Mozilla Firefox\firefox.exe", "ahk_exe firefox.exe") 
+}
+
+visualStudio(){
+   runProgram("C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe", "ahk_exe devenv.exe") 
+}
+
+visualStudioCode(){
+   runProgram("C:\Users\Re-De\AppData\Local\Programs\Microsoft VS Code\Code.exe", "ahk_exe Code.exe") 
+}
+
+android(){
+   runProgram("D:\Android\Android Studio\bin\studio64.exe", "ahk_exe studio64.exe") 
+}
+
+whatsApp(){
+   runProgram("D:\AutoHotKeyLinks\WhatsApp.exe", "ahk_exe WhatsApp.exe") 
+}
+
+word(){
+   runProgram("C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE", "ahk_exe WINWORD.EXE") 
+}
+
+powerPoint(){
+    runProgram("C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE", "ahk_exe POWERPNT.EXE")
+}
+
+keeweb(){
+    runProgram("C:\Program Files\KeeWeb\KeeWeb.exe", "ahk_exe KeeWeb.exe")
+}
+
+discord(){
+    runProgram("C:\Users\Re-De\AppData\Local\Discord\app-0.0.306\Discord.exe", "ahk_exe Discord.exe")
+}
+
+xbox(){
+    runProgram("D:\AutoHotKeyLinks\Xbox.exe", "ahk_exe Xbox.exe")
+}
+
+email(){
+    runProgram("D:\AutoHotKeyLinks\Mail", "ahk_exe ApplicationFrameHost.exe")
+}
+
+dreamWeaver(){
+    runProgram("C:\Program Files\Adobe\Adobe Dreamweaver CC 2019\Dreamweaver.exe", "ahk_exe Dreamweaver.exe")
+}
+
+runProgram(path, exe){
+    IfWinNotExist, %exe%
+        run, %path%
+    Else
+        WinActivate, %exe%
+}
+;:--:--:--:--:--:--:--:--:--:
+; END METHODS
+;:--:--:--:--:--:--:--:--:--:
