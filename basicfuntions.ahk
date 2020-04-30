@@ -19,12 +19,12 @@ NumLock::
 GetKeyState, state, NumLock, T ; D if NumLock is ON or U otherwise
 if(state=="U"){
     SetNumLockState, On
-    ToolTip Caps NumpadLock is on
+    ToolTip NumpadLock is on
     SetTimer, RemoveToolTip, 2000
 }
 else{
     SetNumLockState, Off
-    ToolTip Caps NumpadLock is off
+    ToolTip NumpadLock is off
     SetTimer, RemoveToolTip, 2000
 }
 return
