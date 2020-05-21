@@ -15,19 +15,19 @@ RControl & Enter::ShiftAltTab  ; reverses direction
 ;:--:--:--:--:--:--:--:--:--:
 ; NUMLOCK TOOLTIP
 ;:--:--:--:--:--:--:--:--:--:
-NumLock::
-GetKeyState, state, NumLock, T ; D if NumLock is ON or U otherwise
-if(state=="U"){
-    SetNumLockState, On
-    ToolTip NumpadLock is on
-    SetTimer, RemoveToolTip, 2000
-}
-else{
-    SetNumLockState, Off
-    ToolTip NumpadLock is off
-    SetTimer, RemoveToolTip, 2000
-}
-return
+;NumLock::
+;GetKeyState, state, NumLock, T ; D if NumLock is ON or U otherwise
+;if(state=="U"){
+;    SetNumLockState, On
+;    ToolTip NumpadLock is on
+;    SetTimer, RemoveToolTip, 2000
+;}
+;else{
+;    SetNumLockState, Off
+;    ToolTip NumpadLock is off
+;    SetTimer, RemoveToolTip, 2000
+;}
+;return
 /*
 #Persistent
 ToolTip, Timed ToolTip´n This will be displayed for 5 seconds.
