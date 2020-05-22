@@ -58,12 +58,6 @@ whatsApp()
 keeweb()
 Return
 
-P:: ;Open every Programm needed for Programming maybe move them to the right position on the screens
-Return
-
-O:: ;Open every Programm needed for Office Working maybe move them to the right position on the screens
-Return
-
 S:: spotify()
 T:: sourceTree() 
 F:: firefox() 
@@ -72,13 +66,24 @@ V:: visualStudio()
 A:: android()
 ;!M:: ;Macro Deck
 ;Return
-W:: whatsApp()
-!W:: word() 
+;W:: whatsApp()
+;!W:: word() 
 !P:: powerPoint()
 K:: keeweb() 
 D:: discord() 
 X:: xbox() 
-E:: email()
+E::
+    Send, [
+Return
+R::
+    Send, ]
+Return
+Q::
+    Send, {{}
+Return
+W::
+    Send, {}}
+Return
 ;!E:: ;Eclipse
 ;    IfWinNotExist, ahk_exe WhatsApp.exe
 ;        run, D:\AutoHotKeyLinks\WhatsApp.exe
