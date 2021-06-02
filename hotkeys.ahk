@@ -13,9 +13,7 @@ RControl & Enter::ShiftAltTab  ; reverses direction
 ;:--:--:--:--:--:--:--:--:--:
 ; CAPSLOCK HOTKEYS
 ;:--:--:--:--:--:--:--:--:--:
-
 #If, GetKeyState("Capslock", "P")
-
 F7::
     run, %A_MyDocuments%\Repos\AutoHotKey Scripts
     run, D:\AutoHotKeyLinks
